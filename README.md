@@ -11,7 +11,7 @@ O **Fauna Guard** nasceu da mesma motivação de aproximar tecnologia e conserva
 ## 🌿 Funcionalidades Principais
 
 - **Início:** Chamada direta para explorar ONGs, materiais educativos e conhecer o projeto.
-- **ONGs:** Lista de organizações brasileiras e internacionais atuantes na conservação (onça-pintada, arara-azul, mico-leão-dourado, tamanduá-bandeira, lobo-guará, entre outras).
+- **ONGs:** Lista de organizações internacionais e brasileiras atuantes na conservação (onça-pintada, arara-azul, mico-leão-dourado, tamanduá-bandeira, lobo-guará, entre outras).
 - **Educação:** Artigos, vídeos, documentários e filmes para compreender ameaças, biomas e comportamentos.
 - **Sons da Natureza:** Áudios imersivos (floresta, cachoeira, chuva) para ambientação educativa.
 - **Espécies Ameaçadas:** Grid rápido com links externos para detalhes e lista completa via ICMBio.
