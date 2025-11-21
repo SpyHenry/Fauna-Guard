@@ -8,21 +8,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../src/assets/style/global.css">
     <link rel="stylesheet" href="../src/assets/style/educacao.css">
-    <link rel="icon" type="image/png" href="../src/assets/images/logo-sacred-ocean.png">
-    <title>Sacred Ocean - Educação Marinha</title>
+    <link rel="icon" type="image/png" href="../src/assets/images/logo-fauna-guard.png">
+    <title>Fauna Guard - Educação</title>
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="../src/assets/images/logo-sacred-ocean.png" alt="Sacred Ocean Logo" class="nav-logo-img" width="35" height="35">
-                <span>Sacred Ocean</span>
+                <img src="../src/assets/images/logo-fauna-guard.png" alt="Fauna Guard Logo" class="nav-logo-img" width="37" height="37">
+                <span>Fauna Guard</span>
             </div>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../index.html" class="nav-link">Início</a></li>
                 <li><a href="./ongs.html" class="nav-link">ONGs</a></li>
-                <li><a href="./educacao.html" class="nav-link active">Educação Marinha</a></li>
+                <li><a href="./educacao.html" class="nav-link active">Educação</a></li>
                 <li><a href="./contato.html" class="nav-link">Sobre</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
@@ -40,13 +40,17 @@
         </div>
         <div class="container">
             <div class="page-header">
-                <h1 class="page-title">Educação Marinha</h1>
-                <p class="page-subtitle">Explore o fascinante mundo dos oceanos</p>
+                <h1 class="page-title">Educação</h1>
+                <p class="page-subtitle">Explore a incrível fauna brasileira, e veja como você pode ajudar a protegê-la.</p>
             </div>
             
             <!-- Categorias de Conteúdo -->
             <div class="education-nav">
-                <button class="edu-tab active" data-tab="videos">
+                <button class="edu-tab active" data-tab="recommendations">
+                    <i class="fas fa-film"></i>
+                    Recomendações
+                </button>
+                <button class="edu-tab" data-tab="videos">
                     <i class="fas fa-play-circle"></i>
                     Vídeos
                 </button>
@@ -56,99 +60,213 @@
                 </button>
                 <button class="edu-tab" data-tab="sounds">
                     <i class="fas fa-volume-up"></i>
-                    Sons do Oceano
+                    Sons da Natureza
+                </button>
+                <button class="edu-tab" id="species-tab" data-tab="species-embed" data-url="https://salve.icmbio.gov.br/#/" aria-label="Ver espécies brasileiras em perigo" title="Ver espécies brasileiras em perigo">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Veja as Espécies em Perigo
                 </button>
             </div>
+            
+            <!-- Recomendações -->
+            <div class="edu-content active" id="recommendations">
+                <div class="recommendations-container">
+                    <h2 class="recommendations-title">Filmes e Documentários Recomendados</h2>
+                    <p class="recommendations-subtitle">Explore obras que retratam a fauna brasileira, impactos ambientais e a importância da conservação.</p>
+                    
+                    <div class="movies-grid">
+                        <!-- Serra Pelada -->
+                        <div class="movie-card">
+                            <div class="movie-poster">
+                                <img src="../src/assets/images/recomendacoes/serra-pelada.png" alt="Serra Pelada" loading="lazy">
+                            </div>
+                            <div class="movie-info">
+                                <h4>Serra Pelada — A Lenda da Montanha de Ouro</h4>
+                                <span class="movie-year">2009</span>
+                                <p>Retrata o impacto humano e a devastação ambiental em regiões brasileiras durante a corrida do ouro.</p>
+                                <div class="movie-tags">
+                                    <span class="tag">Impacto Humano</span>
+                                    <span class="tag">Desmatamento</span>
+                                    <span class="tag">Exploração</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- O Lorax -->
+                        <div class="movie-card">
+                            <div class="movie-poster">
+                                <img src="../src/assets/images/recomendacoes/lorax.png" alt="O Lorax: Em Busca da Trúfula Perdida" loading="lazy">
+                            </div>
+                            <div class="movie-info">
+                                <h4>O Lorax: Em Busca da Trúfula Perdida</h4>
+                                <span class="movie-year">2012</span>
+                                <p>Perfeito para conscientização de forma leve e visual sobre os impactos do desmatamento e a importância da preservação da natureza.</p>
+                                <div class="movie-tags">
+                                    <span class="tag">Desmatamento</span>
+                                    <span class="tag">Exploração de Recursos</span>
+                                    <span class="tag">Preservação da Natureza</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Amazônia -->
+                        <div class="movie-card">
+                            <div class="movie-poster">
+                                <img src="../src/assets/images/recomendacoes/amazonia.png" alt="Amazônia" loading="lazy">
+                            </div>
+                            <div class="movie-info">
+                                <h4>Amazônia</h4>
+                                <span class="movie-year">2013</span>
+                                <p>Um filme belíssimo que acompanha um macaco prego perdido na floresta amazônica.</p>
+                                <div class="movie-tags">
+                                    <span class="tag">Biodiversidade Amazônica</span>
+                                    <span class="tag">Fauna Nativa</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- O Começo da Vida -->
+                        <div class="movie-card">
+                            <div class="movie-poster">
+                                <img src="../src/assets/images/recomendacoes/comeco-da-vida.png" alt="O Começo da Vida" loading="lazy">
+                            </div>
+                            <div class="movie-info">
+                                <h4>O Começo da Vida</h4>
+                                <span class="movie-year">2016</span>
+                                <p>Documentário brasileiro que inclui a relação das crianças com a natureza.</p>
+                                <div class="movie-tags">
+                                    <span class="tag">Educação Ambiental</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Nosso Planeta -->
+                        <div class="movie-card">
+                            <div class="movie-poster">
+                                <img src="../src/assets/images/recomendacoes/our-planet.png" alt="Nosso Planeta" loading="lazy">
+                            </div>
+                            <div class="movie-info">
+                                <h4>Nosso Planeta</h4>
+                                <span class="movie-year">2019 — Netflix</span>
+                                <p>Série documental que mostra como as mudanças climáticas afetam os ecossistemas, com episódios focados em florestas tropicais e oceanos.</p>
+                                <div class="movie-tags">
+                                    <span class="tag">Biodiversidade</span>
+                                    <span class="tag">Impacto Humano</span>
+                                    <span class="tag">Conservação Global</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- A Vida em Nosso Planeta -->
+                        <div class="movie-card">
+                            <div class="movie-poster">
+                                <img src="../src/assets/images/recomendacoes/life-on-our-planet.png" alt="A Vida em Nosso Planeta" loading="lazy">
+                            </div>
+                            <div class="movie-info">
+                                <h4>A Vida em Nosso Planeta</h4>
+                                <span class="movie-year">2023 — Netflix</span>
+                                <p>Narrado por Morgan Freeman, mostra a história da vida na Terra e os riscos da perda de espécies.</p>
+                                <div class="movie-tags">
+                                    <span class="tag">Extinção</span>
+                                    <span class="tag">Evolução</span>
+                                    <span class="tag">Preservação</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Conteúdo dos Vídeos -->
-            <div class="edu-content active" id="videos">
+            <div class="edu-content" id="videos">
                 <div class="content-grid">
 
-                    <!-- Documentário: Segredos Sobre o OCEANO -->
+                    <!-- Documentário: Mata Atlântica -->
                     <div class="media-card">
                         <div class="media-thumbnail">
-                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/pelR5ZqLdIg?si=IXGqqzvPSbtyYAGg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/8v5QeKtXmj8?si=1FuuMrTXEWerxxI-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                         <div class="media-info">
-                            <h4>Documentário: Segredos Sobre o OCEANO</h4>
-                            <p>Um documentário fascinante sobre a vida nos oceanos, mostrando a biodiversidade marinha e os desafios da conservação.</p>
+                            <h4>Documentário: Mata Atlântica</h4>
+                            <p>Um documentário sobre a Mata Atlântica, mostrando a biodiversidade e os desafios da conservação.</p>
                             <div class="media-stats">
-                                <span><i class="fas fa-play"></i> 40 min</span>
-                                <span><i class="fas fa-globe"></i> Planet Documentários</span>
+                                <span><i class="fas fa-play"></i> 53 min</span>
+                                <span><i class="fas fa-globe"></i> Jornalismo TV Cultura</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Oceano e mudanças climáticas -->
+                    <!-- Aquecimento Global -->
                     <div class="media-card">
                         <div class="media-thumbnail">
-                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/-49S5T1hZWE?si=spVQTNqGtnoqqP8X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/sgBF3XrJhvY?si=Po99PSj9rIxXf6cs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                         <div class="media-info">
-                            <h4>Oceano e mudanças climáticas</h4>
+                            <h4>Esse é o maior desafio da humanidade</h4>
                             <p>Como os oceanos são afetados pelas mudanças climáticas e seu papel no clima global.</p>
                             <div class="media-stats">
-                                <span><i class="fas fa-play"></i> 3 min</span>
-                                <span><i class="fas fa-globe"></i> National Geographic Brasil</span>
+                                <span><i class="fas fa-play"></i> 19 min</span>
+                                <span><i class="fas fa-globe"></i> Atila Lamariano</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Recifes de Coral: Cidades Submarinas -->
+                    <!-- Importância das abelhas -->
                     <div class="media-card">
                         <div class="media-thumbnail">
-                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/JKHR5RPE5WA?si=Bc3_3e9FFENcD5d-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/2-8eX-Ao964?si=j4IlZ9w8ubTMp0NU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                         <div class="media-info">
-                            <h4>Recifes de Coral: Cidades Submarinas</h4>
-                            <p>Explore a biodiversidade incrível dos recifes de coral e sua importância para o ecossistema.</p>
+                            <h4>Como ABELHAS mudam o Ecossistema</h4>
+                            <p>Entenda o papel crucial das abelhas na polinização e na manutenção dos ecossistemas.</p>
                             <div class="media-stats">
-                                <span><i class="fas fa-play"></i> 18 min</span>
-                                <span><i class="fas fa-globe"></i> Mundo Feroz</span>
+                                <span><i class="fas fa-play"></i> 5 min</span>
+                                <span><i class="fas fa-globe"></i> Circuito Ambiental </span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- O Impacto do Plástico nos Oceanos -->
+                    <!-- Aves do Brasil -->
                     <div class="media-card">
                         <div class="media-thumbnail">
-                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/-UmOPQRpRIE?si=FuLYapFQ92e4G5Nq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/eMXtBVrys2c?si=QtQAwUvwJP_fmVYz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                         <div class="media-info">
-                            <h4>O Impacto do Plástico nos Oceanos</h4>
-                            <p>Entenda como a poluição plástica afeta a vida marinha e o que podemos fazer.</p>
+                            <h4>ENDÊMICAS do BRASIL</h4>
+                            <p>Aves que só existem no Brasil, destacando a importância da conservação dessas espécies únicas.</p>
                             <div class="media-stats">
-                                <span><i class="fas fa-play"></i> 7 min</span>
-                                <span><i class="fas fa-globe"></i> Nossa ecologia</span>
+                                <span><i class="fas fa-play"></i> 11 min</span>
+                                <span><i class="fas fa-globe"></i> Planeta Aves</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Comunicação Aquática -->
+                    <!-- Comunicação entre os animais -->
                     <div class="media-card">
                         <div class="media-thumbnail">
-                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/NnBa_emmm1Q?si=jbD4C2npKpIVkfqx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/8UgjD7-WlY8?si=_cBaXp-oST96fwpJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                         <div class="media-info">
-                            <h4>O Canto das animais: Comunicação Aquática</h4>
-                            <p>Descubra os mistérios da comunicação das baleias e dos golfinhos, e como eles se localizam nos oceanos.</p>
+                            <h4>COMO OS ANIMAIS SE COMUNICAM?</h4>
+                            <p>Descubra como os animais utilizam sons, sinais e comportamentos para se comunicar entre si.</p>
                             <div class="media-stats">
-                                <span><i class="fas fa-play"></i> 8 min</span>
-                                <span><i class="fas fa-globe"></i> Luz, Câmera e Ciência USP</span>
+                                <span><i class="fas fa-play"></i> 6 min</span>
+                                <span><i class="fas fa-globe"></i> Biologando</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Ecossistemas Aquáticos -->
+                    <!-- Quem são os povos indígenas do Brasil? História e cultura explicadas -->
                     <div class="media-card">
                         <div class="media-thumbnail">
-                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/tYJC-KWJiWw?si=9frV948hLuQQLykQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/VzjQEIKrkp8?si=Fm5Y3MXHx9UYKdiB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                         <div class="media-info">
-                            <h4>Ecossistemas Aquáticos</h4>
-                            <p>Conheça a rica biodiversidade dos ecossistemas aquáticos.</p>
+                            <h4>Quem são os povos indígenas do Brasil? </h4>
+                            <p>História e cultura explicadas de forma acessível e educativa.</p>
                             <div class="media-stats">
-                                <span><i class="fas fa-play"></i> 4 min</span>
-                                <span><i class="fas fa-globe"></i> Nossa ecologia</span>
+                                <span><i class="fas fa-play"></i> 6 min</span>
+                                <span><i class="fas fa-globe"></i> Toda Matéria</span>
                             </div>
                         </div>
                     </div>
@@ -158,136 +276,134 @@
             <!-- Conteúdo dos Artigos -->
             <div class="edu-content" id="articles">
                 <div class="articles-grid">
-                    <!-- Biodiversidade Marinha -->
-                    <article class="article-card" onclick="window.open('https://123ecos.com.br/docs/biodiversidade-marinha/', '_blank')" style="cursor: pointer;">
+                    <!-- Tecnologia na preservação -->
+                    <article class="article-card" onclick="window.open('https://www.wwf.org.br/nosso_trabalho/tecnologias_para_conservacao/', '_blank')" style="cursor: pointer;">
                         <div class="article-image">
-                            <img src="https://images.unsplash.com/photo-1515467699666-4adf84b2fd42?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHZpZGElMjBtYXJpbmhhfGVufDB8fDB8fHww" alt="Biodiversidade Marinha">
-                            <div class="external-link-badge">
-                                <i class="fas fa-external-link-alt"></i>
-                            </div>
-                        </div>
-                        <div class="article-content">
-                            <span class="article-category">Biodiversidade</span>
-                            <h4>A Importância da Biodiversidade Marinha</h4>
-                            <p>Os oceanos abrigam uma diversidade de vida incrível que é fundamental para o equilíbrio do planeta. Descubra como cada espécie contribui para os ecossistemas marinhos e por que sua preservação é crucial.</p>
-                            <div class="article-meta">
-                                <span><i class="fas fa-globe"></i> 123ecos</span>
-                                <span><i class="fas fa-clock"></i> 10 min de leitura</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Mudanças Climáticas -->
-                    <article class="article-card" onclick="window.open('https://mundoeducacao.uol.com.br/geografia/influencia-dos-oceanos-sobre-clima.htm', '_blank')" style="cursor: pointer;">
-                        <div class="article-image">
-                            <img src="https://images.unsplash.com/photo-1569163139599-0f4517e36f51?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGNsaW1hJTIwZ2xvYmFsfGVufDB8fDB8fHww" alt="Mudanças Climáticas">
+                            <img src="https://images.unsplash.com/photo-1669216369564-bdac8b823cb8?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Espécies Ameaçadas">
                             <div class="external-link-badge">
                                 <i class="fas fa-external-link-alt"></i>
                             </div>
                         </div>
                         
                         <div class="article-content">
-                            <span class="article-category">Clima</span>
-                            <h4>Como os Oceanos Regulam o Clima Global</h4>
-                            <p>Entenda o papel crucial dos oceanos na regulação do clima terrestre e como as mudanças climáticas os afetam.</p>
+                            <span class="article-category">Tecnologia para Conservação</span>
+                            <h4>Tecnologias Inovadoras para Preservação Ambiental</h4>
+                            <p>Descubra como a tecnologia está sendo utilizada para proteger o meio ambiente e promover a conservação da biodiversidade.</p>
                             <div class="article-meta">
-                                <span><i class="fas fa-globe"></i> Mundo Educação</span>
-                                <span><i class="fas fa-clock"></i> 2 min de leitura</span>
+                                <span><i class="fas fa-globe"></i> WWF Brasil</span>
+                                <span><i class="fas fa-clock"></i> 15 min de leitura + vídeos informativos</span>
                             </div>
                         </div>
                     </article>
 
-                    <!-- Conservação -->
-                    <article class="article-card" onclick="window.open('https://www.tnc.org.br/o-que-fazemos/nossas-prioridades/proteger-terras-e-aguas/protegendo-nossos-oceanos/', '_blank')" style="cursor: pointer;">
+                    <!-- Tráfico de Animais -->
+                    <article class="article-card" onclick="window.open('https://www.gov.br/ibama/pt-br/assuntos/noticias/2024/ibama-combate-o-trafico-internacional-de-animais-silvestres-em-parceria-com-instituicoes-nacionais-e-estrangeiras', '_blank')" style="cursor: pointer;">
                         <div class="article-image">
-                            <img src="https://plus.unsplash.com/premium_photo-1663039947303-0fad26f737b8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvdGUlQzMlQTclQzMlQTNvJTIwb2NlYW5vfGVufDB8fDB8fHww" alt="Conservação">
+                            <img src="https://images.unsplash.com/photo-1552106431-3d7c5c68bb72?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tráfico de Animais">
                             <div class="external-link-badge">
                                 <i class="fas fa-external-link-alt"></i>
                             </div>
                         </div>
                         <div class="article-content">
-                            <span class="article-category">Conservação</span>
-                            <h4>Estratégias de Conservação Marinha</h4>
-                            <p>Conheça as principais estratégias utilizadas para proteger e conservar os ecossistemas marinhos ao redor do mundo.</p>
+                            <span class="article-category">Proteção</span>
+                            <h4>Combate ao Tráfico de Animais Silvestres</h4>
+                            <p>Entenda como funciona o tráfico de animais no Brasil e as ações de combate a este crime ambiental.</p>
                             <div class="article-meta">
-                                <span><i class="fas fa-globe"></i> TNC</span>
-                                <span><i class="fas fa-clock"></i> 6 min de leitura</span>
+                                <span><i class="fas fa-globe"></i> IBAMA</span>
+                                <span><i class="fas fa-clock"></i> 7 min de leitura</span>
                             </div>
                         </div>
                     </article>
 
-                    <!-- Microplásticos -->
-                    <article class="article-card" onclick="window.open('https://idec.org.br/dicas-e-direitos/microplasticos-nos-oceanos-e-no-organismo-humano-por-que-voce-deve-se-preocupar-com', '_blank')" style="cursor: pointer;">
+                    <!-- Onça-Pintada -->
+                    <article class="article-card" onclick="window.open('https://www.nationalgeographicbrasil.com/animais/2024/11/qual-e-o-maior-felino-das-americas-alguns-exemplares-medem-ate-1-metro-e-80-centimetros', '_blank')" style="cursor: pointer;">
                         <div class="article-image">
-                            <img src="https://images.unsplash.com/photo-1670327370312-01cc5f58bbeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bWljcm9wbCVDMyVBMXN0aWNvfGVufDB8fDB8fHww" alt="Microplásticos">
-                            <div class="external-link-badge">
-                                <i class="fas fa-external-link-alt"></i>
-                            </div>
-                        </div>
-                        <div class="article-content">
-                            <span class="article-category">Poluição</span>
-                            <h4>Microplásticos: A Ameaça Invisível</h4>
-                            <p>Como os microplásticos estão invadindo nossos oceanos e afetando toda a cadeia alimentar marinha.</p>
-                            <div class="article-meta">
-                                <span><i class="fas fa-globe"></i> IDEC</span>
-                                <span><i class="fas fa-clock"></i> 4 min de leitura</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Tecnologia -->
-                    <article class="article-card" onclick="window.open('https://www.spinnaker-watches.com.br/blogs/novidades/o-papel-da-tecnologia-na-protecao-do-mar-inovacoes-para-a-preservacao-dos-oceanos?srsltid=AfmBOoqxBnfo_3jq5Y4fmo-y5I_ZA0ms46uWSs-0SFQMhJN6V9r7T7Od', '_blank')" style="cursor: pointer;">
-                        <div class="article-image">
-                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHRlY25vbG9naWF8ZW58MHx8MHx8fDA%3D" alt="Tecnologia Marinha">
-                            <div class="external-link-badge">
-                                <i class="fas fa-external-link-alt"></i>
-                            </div>
-                        </div>
-                        <div class="article-content">
-                            <span class="article-category">Tecnologia</span>
-                            <h4>Tecnologia Marinha: Inovações e Desafios</h4>
-                            <p>Explore as inovações em tecnologia marinha para proteger nossos oceanos.</p>
-                            <div class="article-meta">
-                                <span><i class="fas fa-globe"></i> Spinnaker</span>
-                                <span><i class="fas fa-clock"></i> 4 min de leitura</span>
-                            </div>
-                        </div>
-                    </article>
-                    <!-- Tartarugas Ancestrais -->
-                    <article class="article-card" onclick="window.open('https://outraspalavras.net/terraeantropoceno/tartarugas-marinhas-gps-e-o-antropoceno/', '_blank')" style="cursor: pointer;">
-                        <div class="article-image">
-                            <img src="https://images.unsplash.com/photo-1581242163695-19d0acfd486f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRhcnRhcnVnYSUyMG1hcmluaGF8ZW58MHx8MHx8fDA%3D" alt="Navegadores Ancestrais">
+                            <img src="https://images.unsplash.com/photo-1616128417743-c3a6992a65e7?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Onça-Pintada">
                             <div class="external-link-badge">
                                 <i class="fas fa-external-link-alt"></i>
                             </div>
                         </div>
                         <div class="article-content">
                             <span class="article-category">Espécies</span>
-                            <h4>Tartarugas Marinhas: Navegadores Ancestrais</h4>
-                            <p>Explore a vida fascinante das tartarugas marinhas e como elas navegam pelos oceanos.</p>
+                            <h4>Onça-Pintada: O Maior Felino das Américas</h4>
+                            <p>Conheça o maior felino das Américas e os desafios para a conservação desta espécie icônica da fauna brasileira.</p>
                             <div class="article-meta">
-                                <span><i class="fas fa-globe"></i> Outras Palavras</span>
+                                <span><i class="fas fa-globe"></i> National Geographic Brasil</span>
+                                <span><i class="fas fa-clock"></i> 6 min de leitura</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Biodiversidade Brasileira -->
+                    <article class="article-card" onclick="window.open('https://www.wwf.org.br/?42642/Biodiversidade-em-unidades-de-conservao--destaque-de-publicao', '_blank')" style="cursor: pointer;">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1631643830562-527d8d967dbf?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Biodiversidade Brasileira">
+                            <div class="external-link-badge">
+                                <i class="fas fa-external-link-alt"></i>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <span class="article-category">Biodiversidade</span>
+                            <h4>Brasil Abriga Quase 20% da Biodiversidade Mundial</h4>
+                            <p>O Brasil é um dos países com maior biodiversidade do planeta, abrigando milhares de espécies de fauna e flora. Conheça a riqueza dos nossos biomas e a importância de sua conservação.</p>
+                            <div class="article-meta">
+                                <span><i class="fas fa-globe"></i> WWF Brasil</span>
+                                <span><i class="fas fa-clock"></i> 6 min de leitura</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Desmatamento -->
+                    <article class="article-card" onclick="window.open('https://www.worldanimalprotection.org.br/mais-recente/blogs/desmatamento/', '_blank')" style="cursor: pointer;">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1645430785543-5d985566d361?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Desmatamento">
+                            <div class="external-link-badge">
+                                <i class="fas fa-external-link-alt"></i>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <span class="article-category">Ameaças</span>
+                            <h4>Desmatamento Ameaça a Fauna Brasileira</h4>
+                            <p>Como a destruição de habitats naturais coloca em risco a sobrevivência de milhares de espécies da fauna brasileira.</p>
+                            <div class="article-meta">
+                                <span><i class="fas fa-globe"></i> World Animal Protection</span>
+                                <span><i class="fas fa-clock"></i> 15 min de leitura</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Pantanal -->
+                    <article class="article-card" onclick="window.open('https://brasil.mapbiomas.org/2025/11/12/pantanal-tem-reducao-de-75-na-frequencia-anual-de-areas-alagadas/', '_blank')" style="cursor: pointer;">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1683880853250-12bd7a4e9cda?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Pantanal">
+                            <div class="external-link-badge">
+                                <i class="fas fa-external-link-alt"></i>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <span class="article-category">Biomas</span>
+                            <h4>Pantanal tem redução de 75% na frequência anual de áreas alagadas</h4>
+                            <p>Perda de cobertura vegetal no Planalto da Bacia do Alto Paraguai agrava a seca no bioma.</p>
+                            <div class="article-meta">
+                                <span><i class="fas fa-globe"></i> MapBiomas Brasil</span>
                                 <span><i class="fas fa-clock"></i> 6 min de leitura</span>
                             </div>
                         </div>
                     </article>
                 </div>
             </div>
-            <!-- Sons do Oceano -->
+            <!-- Sons da fauna brasileira -->
             <div class="edu-content" id="sounds">
                 <div class="sounds-container">
-                    <h3>Ouça os Sons do Oceano</h3>
-                    <p>Conecte-se com o oceano através desta coleção de sons naturais.</p>
-                    
                     <div class="audio-players">
                         <div class="audio-card">
                             <div class="audio-info">
-                                <h4><i class="fas fa-water"></i> Ondas Suaves</h4>
-                                <p>Som de ondas quebrando na praia</p>
+                                <h4><i class="fas fa-tree"></i> Floresta</h4>
+                                <p>Som ambiente da floresta.</p>
                             </div>
                             <div class="audio-controls">
-                                <audio id="audio-waves" src="../src/assets/audios/waves.mp3"></audio>
-                                <button class="play-btn" data-audio="waves">
+                                <audio id="audio-forest" src="../src/assets/audios/forest.mp3"></audio>
+                                <button class="play-btn" data-audio="forest">
                                     <i class="fas fa-play"></i>
                                 </button>
                                 <div class="audio-progress">
@@ -297,12 +413,12 @@
                         </div>
                         <div class="audio-card">
                             <div class="audio-info">
-                                <h4><i class="fas fa-music"></i> Canto das Baleias</h4>
-                                <p>Sons místicos das baleias</p>
+                                <h4><i class="fas fa-water"></i> Queda d'Água</h4>
+                                <p>Som de cachoeira em área de mata.</p>
                             </div>
                             <div class="audio-controls">
-                                <audio id="audio-whales" src="../src/assets/audios/whales.mp3"></audio>
-                                <button class="play-btn" data-audio="whales">
+                                <audio id="audio-waterfall" src="../src/assets/audios/waterfall.mp3"></audio>
+                                <button class="play-btn" data-audio="waterfall">
                                     <i class="fas fa-play"></i>
                                 </button>
                                 <div class="audio-progress">
@@ -312,12 +428,12 @@
                         </div>
                         <div class="audio-card">
                             <div class="audio-info">
-                                <h4><i class="fas fa-wind"></i> Tempestade no Mar</h4>
-                                <p>Som do oceano em tempestade</p>
+                                <h4><i class="fas fa-cloud-rain"></i> Chuva na Mata</h4>
+                                <p>Pancada de chuva sobre copa das árvores.</p>
                             </div>
                             <div class="audio-controls">
-                                <audio id="audio-storm" src="../src/assets/audios/storm.mp3"></audio>
-                                <button class="play-btn" data-audio="storm">
+                                <audio id="audio-rain" src="../src/assets/audios/rain.mp3"></audio>
+                                <button class="play-btn" data-audio="rain">
                                     <i class="fas fa-play"></i>
                                 </button>
                                 <div class="audio-progress">
@@ -327,6 +443,40 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <!-- Espécies ameaçadas (grid simples) -->
+            <div class="edu-content" id="species-embed">
+                <section class="species-section">
+                    <h2 class="species-title">Espécies Ameaçadas do Brasil</h2>
+                    <p class="species-subtitle">Cinco espécies emblemáticas em risco – clique para saber mais.</p>
+                    <div class="species-grid">
+                        <a class="species-card" href="https://oncafari.org/especie_fauna/onca-pintada/" target="_blank" rel="noopener" aria-label="Saiba mais sobre a Onça-Pintada">
+                            <img src="https://images.unsplash.com/photo-1528238344097-a8994f7c74e4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8b24lQzMlQTdhJTIwcGludGFkYXxlbnwwfHwwfHx8MA%3D%3D" alt="Onça-Pintada" loading="lazy">
+                            <span class="species-name">Onça-Pintada</span>
+                        </a>
+                        <a class="species-card" href="https://www.institutoararaazul.org.br/especies/arara-azul/" target="_blank" rel="noopener" aria-label="Saiba mais sobre a Arara-Azul">
+                            <img src="https://images.unsplash.com/photo-1750345584006-a79e5e56a897?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGFyYXJhJTIwYXp1bHxlbnwwfHwwfHx8MA%3D%3D" alt="Arara-Azul" loading="lazy">
+                            <span class="species-name">Arara-Azul</span>
+                        </a>
+                        <a class="species-card" href="https://www.micoleao.org.br/" target="_blank" rel="noopener" aria-label="Saiba mais sobre o Mico-Leão-Dourado">
+                            <img src="https://images.unsplash.com/photo-1558724483-0a9d17b1defc?w=500&auto=format&fit=crop&q=60" alt="Mico-Leão-Dourado" loading="lazy">
+                            <span class="species-name">Mico-Leão-Dourado</span>
+                        </a>
+                        <a class="species-card" href="https://www.nationalgeographicbrasil.com/animais/mamiferos/tamandua-bandeira" target="_blank" rel="noopener" aria-label="Saiba mais sobre o Tamanduá-Bandeira">
+                            <img src="https://static.todamateria.com.br/upload/57/bf/57bf86a6e2835-tamandua-bandeira.jpg" alt="Tamanduá-Bandeira" loading="lazy">
+                            <span class="species-name">Tamanduá-Bandeira</span>
+                        </a>
+                        <a class="species-card" href="https://www.worldanimalprotection.org.br/o-que-nos-fazemos/animais-silvestres/calendario2024-todo-dia-e-animal/lobo-guara/" target="_blank" rel="noopener" aria-label="Saiba mais sobre o Lobo-Guará">
+                            <img src="https://s2-vidadebicho.glbimg.com/sDuXEE4SxEqXqcR4BcHC4K3gXQA=/0x0:800x533/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_fb623579cd474803aedbbbbae014af68/internal_photos/bs/2022/6/F/APoVl1Q7GjCkZfN7YI6g/2022-09-07-lobo-guara-27-fatos-sobre-este-belo-animal-brasileiro.jpeg" alt="Lobo-Guará" loading="lazy">
+                            <span class="species-name">Lobo-Guará</span>
+                        </a>
+                    </div>
+                    <div class="species-full-link">
+                        <a href="https://salve.icmbio.gov.br/#/" target="_blank" rel="noopener" class="species-button">
+                            Ver lista completa no ICMBio
+                        </a>
+                    </div>
+                </section>
             </div>
         </div>
     </main>

@@ -53,7 +53,7 @@
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, #87ceeb 0%, #4fb3d9 50%, #00a8cc 100%);
+    background: linear-gradient(135deg, #66bb6a 0%, #43a047 50%, #2e7d32 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -76,7 +76,7 @@
 .stat {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(79, 179, 217, 0.3);
+    border: 1px solid rgba(67, 160, 71, 0.3);
     border-radius: 15px;
     padding: 1.5rem;
     text-align: center;
@@ -86,14 +86,14 @@
 .stat:hover {
     transform: translateY(-5px);
     background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(79, 179, 217, 0.5);
+    border-color: rgba(67, 160, 71, 0.5);
 }
 
 .stat-number {
     display: block;
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--seafoam);
+    color: var(--sage-green);
     margin-bottom: 0.5rem;
 }
 
@@ -116,7 +116,7 @@
 
 .loading-content i {
     font-size: 3rem;
-    color: var(--seafoam);
+    color: var(--sage-green);
     margin-bottom: 1rem;
 }
 
@@ -126,7 +126,7 @@
     background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(79, 179, 217, 0.3);
+    border: 1px solid rgba(67, 160, 71, 0.3);
 }
 
 /* ========================================
@@ -166,13 +166,13 @@
     align-items: center;
     gap: 15px;
     font-size: 2rem;
-    color: var(--light-blue);
+    color: var(--light-green);
     margin-bottom: 2rem;
     font-weight: 600;
 }
 
 .category-title i {
-    color: var(--seafoam);
+    color: var(--sage-green);
     font-size: 1.5rem;
 }
 
@@ -185,7 +185,7 @@
 .ong-card {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(79, 179, 217, 0.3);
+    border: 1px solid rgba(67, 160, 71, 0.3);
     border-radius: 20px;
     padding: 1.5rem;
     transition: all 0.3s ease;
@@ -194,15 +194,15 @@
 }
 
 .ong-card.featured {
-    border: 2px solid var(--seafoam);
-    box-shadow: 0 0 30px rgba(79, 179, 217, 0.3);
+    border: 2px solid var(--sage-green);
+    box-shadow: 0 0 30px rgba(67, 160, 71, 0.3);
 }
 
 .ong-card:hover {
     transform: translateY(-10px);
     background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(79, 179, 217, 0.5);
-    box-shadow: 0 20px 40px rgba(0, 105, 148, 0.3);
+    border-color: rgba(67, 160, 71, 0.5);
+    box-shadow: 0 20px 40px rgba(27, 94, 32, 0.3);
 }
 
 .ong-header {
@@ -215,7 +215,7 @@
 .ong-logo {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, var(--seafoam), var(--aqua));
+    background: linear-gradient(135deg, var(--sage-green), var(--leaf-green));
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -700,11 +700,14 @@
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, var(--light-blue) 0%, var(--seafoam) 100%);
+    background: linear-gradient(135deg, var(--light-green) 0%, var(--sage-green) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     animation: fadeInUp 1s ease;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
 }
 
 .page-subtitle {

@@ -66,16 +66,51 @@ function initEducationTabs() {
 
     eduTabs.forEach(tab => {
         tab.addEventListener('click', () => {
+            // Tratamento especial para abas externas com embed
+            if (tab.dataset.url && tab.dataset.tab) {
+                const targetContent = document.getElementById(tab.dataset.tab);
+                if (targetContent && !targetContent.dataset.loaded) {
+                    const wrapper = targetContent.querySelector('.embed-wrapper');
+                    if (wrapper) {
+                        const iframe = document.createElement('iframe');
+                        iframe.src = tab.dataset.url;
+                        iframe.title = 'Lista de espécies ameaçadas (ICMBio)';
+                        iframe.loading = 'lazy';
+                        iframe.style.width = '100%';
+                        iframe.style.height = '72vh';
+                        iframe.style.border = 'none';
+                        iframe.setAttribute('referrerpolicy', 'no-referrer');
+                        wrapper.appendChild(iframe);
+                        targetContent.dataset.loaded = 'true';
+                        const status = wrapper.querySelector('.embed-status');
+                        if (status) status.textContent = 'Conteúdo carregando...';
+
+                        // Fallback após timeout se bloqueado
+                        setTimeout(() => {
+                            if (!iframe.contentWindow) {
+                                const fallback = document.createElement('div');
+                                fallback.className = 'embed-fallback';
+                                fallback.innerHTML = 'Não foi possível carregar via embed. <button type="button" class="open-external">Abrir em nova guia</button>';
+                                wrapper.appendChild(fallback);
+                                fallback.querySelector('.open-external').addEventListener('click', () => window.open(tab.dataset.url, '_blank'));
+                                if (status) status.textContent = 'Embed bloqueado pelo site.';
+                            } else {
+                                if (status) status.textContent = '';
+                            }
+                        }, 5000);
+                    }
+                }
+            } else if (tab.dataset.url) {
+                // Caso genérico externo sem área de destino
+                window.open(tab.dataset.url, '_blank');
+                return;
+            }
 
             eduTabs.forEach(t => t.classList.remove('active'));
             eduContents.forEach(c => c.classList.remove('active'));
-            
             tab.classList.add('active');
-    
             const targetContent = document.getElementById(tab.dataset.tab);
-            if (targetContent) {
-                targetContent.classList.add('active');
-            }
+            if (targetContent) targetContent.classList.add('active');
         });
     });
 }

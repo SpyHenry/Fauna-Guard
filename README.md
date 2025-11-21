@@ -1,49 +1,48 @@
-# Sacred Ocean 🐋
-![Sacred Ocean Preview](./preview-sacred-ocean.png) <br>
-Sacred Ocean é uma plataforma web dedicada à conscientização sobre a preservação dos oceanos, reunindo informações sobre ONGs marinhas, recursos educacionais e sons do oceano para inspirar e engajar pessoas na causa ambiental.
+# Fauna Guard 🐾
 
-## 🚀 Sobre o Projeto
+![Preview do Fauna Guard](./preview-fauna-guard.png)
 
-Link: https://spyhenry.github.io/Sacred-Ocean/ <br>
-O Sacred Ocean nasceu da paixão pela tecnologia e pelo meio ambiente. O objetivo é facilitar o acesso a informações relevantes sobre a vida marinha, ONGs atuantes no Brasil e conteúdos educativos para todos que desejam aprender e contribuir para a conservação dos oceanos.
+Plataforma web dedicada à conscientização sobre a preservação da fauna brasileira, reunindo organizações, materiais educativos, recomendações, sons naturais e espécies ameaçadas – tudo em um só lugar para inspirar proteção e engajamento.
 
-## 🐢 Funcionalidades
+## 🚀 Visão Geral
 
-- **Página Inicial:** Apresentação do projeto e suas principais funcionalidades.
-- **ONGs:** Lista de ONGs nacionais e internacionais com atuação no Brasil, com links diretos para seus sites.
-- **Educação Marinha:** Artigos, vídeos e sons do oceano para promover o conhecimento sobre o tema.
-- **Sobre:** Informações sobre mim e valores pessoais.
+O **Fauna Guard** nasceu da mesma motivação de aproximar tecnologia e conservação ambiental. Evoluiu de um projeto anterior voltado aos oceanos (Sacred Ocean) para focar totalmente em biodiversidade terrestre brasileira. O objetivo é facilitar o acesso rápido a ONGs, conteúdos educativos e ferramentas de sensibilização para quem deseja aprender e ajudar.
 
-## 🎨 Tecnologias Utilizadas
+## 🌿 Funcionalidades Principais
+
+- **Início:** Chamada direta para explorar ONGs, materiais educativos e conhecer o projeto.
+- **ONGs:** Lista de organizações brasileiras e internacionais atuantes na conservação (onça-pintada, arara-azul, mico-leão-dourado, tamanduá-bandeira, lobo-guará, entre outras).
+- **Educação:** Artigos, vídeos, documentários e filmes para compreender ameaças, biomas e comportamentos.
+- **Sons da Natureza:** Áudios imersivos (floresta, cachoeira, chuva) para ambientação educativa.
+- **Espécies Ameaçadas:** Grid rápido com links externos para detalhes e lista completa via ICMBio.
+- **Sobre:** Autor, missão, habilidades e links de contato.
+
+## 🛠 Tecnologias & Abordagem
 
 - HTML5
 - CSS3
 - JavaScript
 
+## 📚 Conteúdo Educacional
 
-## 📚 Conteúdo
-
-- **Artigos e Vídeos:** Seleção de materiais educativos sobre vida marinha e sustentabilidade.
-- **Sons do Oceano:** Áudios para conectar o usuário ao ambiente marinho.
-- **ONGs:** Acesso rápido às principais organizações de conservação marinha.
+- Artigos sobre biodiversidade, tecnologia para conservação, tráfico de fauna e biomas brasileiros.
+- Vídeos selecionados (biomas, comunicação animal, povos indígenas, aves endêmicas).
+- Recomendações cinematográficas para sensibilização ambiental.
 
 ## 📱 Responsividade
 
-O Sacred Ocean foi projetado para funcionar perfeitamente em celulares, tablets e desktops, garantindo uma experiência agradável em qualquer dispositivo.
+Desenhado mobile-first com ajustes para tablets e desktops. Grids se reorganizam, componentes mantêm legibilidade em telas menores.
 
 ## 👤 Autor
 
-Henrique Baptista Bandeira  
-Desenvolvedor web apaixonado por tecnologia e conservação ambiental.  <br>
+**Henrique Baptista Bandeira**  
+Desenvolvedor web focado em unir tecnologia e conservação ambiental.  
+Portfólio: <https://spyhenry.github.io/>  
 [![LinkedIn](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/henrique-baptista-bandeira)
 [![GitHub](https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/SpyHenry)
 
 ---
 
-<div align="center">
+**Fauna Guard** 🐾 Conectando pessoas à preservação da fauna brasileira através da tecnologia.
 
-**Sacred Ocean** 🌊 **Conectando pessoas à preservação dos oceanos através da tecnologia**
-
-*Desenvolvido com 💙 por **Henrique Baptista Bandeira***
-
-</div>
+Desenvolvido com dedicação por **Henrique Baptista Bandeira**

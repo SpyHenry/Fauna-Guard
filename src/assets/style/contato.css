@@ -23,22 +23,68 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: linear-gradient(135deg, rgba(79, 179, 217, 0.2), rgba(0, 168, 204, 0.2));
+    background: linear-gradient(135deg, rgba(67, 160, 71, 0.2), rgba(67, 160, 71, 0.2));
     backdrop-filter: blur(10px);
-    border: 2px solid var(--seafoam);
+    border: 2px solid var(--sage-green);
     border-radius: 25px;
     padding: 10px 20px;
-    color: var(--light-blue);
+    color: var(--light-green);
     font-weight: 600;
     font-size: 1rem;
     margin-top: 15px;
     animation: fadeInUp 1s ease 0.4s both;
-    box-shadow: 0 4px 15px rgba(79, 179, 217, 0.3);
+    box-shadow: 0 4px 15px rgba(67, 160, 71, 0.3);
 }
 
 .tech-planet-tag i {
-    color: var(--seafoam);
+    color: var(--sage-green);
     font-size: 1.2rem;
+}
+
+/* Link abaixo do selo (projeto) */
+.project-link {
+    margin-top: 10px;
+}
+
+/* Botão do projeto oceano (estilo azul) */
+.project-link a.ocean-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: linear-gradient(135deg, #1e88e5, #1565c0);
+    color: #ffffff;
+    border-radius: 24px;
+    border: 2px solid rgba(21, 101, 192, 0.6);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    box-shadow: 0 6px 18px rgba(21, 101, 192, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.project-link a.ocean-link:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #1976d2, #0d47a1);
+    box-shadow: 0 10px 24px rgba(13, 71, 161, 0.45);
+}
+
+.project-link a.ocean-link:focus-visible {
+    outline: 3px solid rgba(25, 118, 210, 0.6);
+    outline-offset: 2px;
+}
+
+.project-link a.ocean-link i {
+    font-size: 1rem;
+    opacity: 0.95;
+}
+
+/* Logo do Sacred Ocean dentro do botão */
+.project-link a.ocean-link .ocean-logo {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    display: block;
 }
 
 .contact-options {
@@ -58,7 +104,7 @@
     backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 40px;
-    border: 1px solid rgba(79, 179, 217, 0.2);
+    border: 1px solid rgba(67, 160, 71, 0.2);
 }
 
 .form-header {
@@ -67,7 +113,7 @@
 }
 
 .form-header h2 {
-    color: var(--seafoam);
+    color: var(--sage-green);
     margin-bottom: 15px;
     display: flex;
     align-items: center;
@@ -90,13 +136,13 @@
     backdrop-filter: blur(10px);
     border-radius: 16px;
     padding: 30px;
-    border: 1px solid rgba(79, 179, 217, 0.2);
+    border: 1px solid rgba(67, 160, 71, 0.2);
 }
 
 .contact-card h3,
 .social-card h3,
 .faq-card h3 {
-    color: var(--seafoam);
+    color: var(--sage-green);
     margin-bottom: 25px;
     display: flex;
     align-items: center;
@@ -110,7 +156,7 @@
     gap: 15px;
     margin-bottom: 20px;
     padding-bottom: 20px;
-    border-bottom: 1px solid rgba(79, 179, 217, 0.1);
+    border-bottom: 1px solid rgba(67, 160, 71, 0.1);
 }
 
 .contact-item:last-child {
@@ -122,7 +168,7 @@
 .contact-icon {
     width: 45px;
     height: 45px;
-    background: linear-gradient(135deg, var(--seafoam), var(--ocean-blue));
+    background: linear-gradient(135deg, var(--sage-green), var(--forest-green));
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -133,7 +179,7 @@
 }
 
 .contact-details h4 {
-    color: var(--seafoam);
+    color: var(--sage-green);
     margin-bottom: 5px;
     font-size: 1rem;
 }
@@ -172,7 +218,7 @@
 .social-link:hover {
     background: rgba(255, 255, 255, 0.1);
     transform: translateX(5px);
-    border-color: rgba(79, 179, 217, 0.3);
+    border-color: rgba(67, 160, 71, 0.3);
 }
 
 .social-link i {
@@ -191,7 +237,7 @@
 .faq-item {
     margin-bottom: 20px;
     padding-bottom: 20px;
-    border-bottom: 1px solid rgba(79, 179, 217, 0.1);
+    border-bottom: 1px solid rgba(67, 160, 71, 0.1);
 }
 
 .faq-item:last-child {
@@ -201,7 +247,7 @@
 }
 
 .faq-item h4 {
-    color: var(--seafoam);
+    color: var(--sage-green);
     margin-bottom: 8px;
     font-size: 1rem;
 }
@@ -427,11 +473,11 @@
     padding: 20px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 15px;
-    border: 1px solid rgba(79, 179, 217, 0.2);
+    border: 1px solid rgba(67, 160, 71, 0.2);
 }
 
 .about-section h3 {
-    color: var(--ocean-blue);
+    color: var(--light-green);
     margin-bottom: 15px;
     font-size: 1.3rem;
     display: flex;
@@ -456,20 +502,20 @@
     flex-direction: column;
     align-items: center;
     padding: 15px;
-    background: rgba(79, 179, 217, 0.1);
+    background: rgba(67, 160, 71, 0.1);
     border-radius: 10px;
-    border: 1px solid rgba(79, 179, 217, 0.3);
+    border: 1px solid rgba(67, 160, 71, 0.3);
     transition: all 0.3s ease;
 }
 
 .skill-item:hover {
-    background: rgba(79, 179, 217, 0.2);
+    background: rgba(67, 160, 71, 0.2);
     transform: translateY(-3px);
 }
 
 .skill-item i {
     font-size: 2rem;
-    color: var(--ocean-blue);
+    color: var(--light-green);
     margin-bottom: 8px;
 }
 
@@ -483,12 +529,12 @@
     background: rgba(255, 255, 255, 0.08);
     padding: 20px;
     border-radius: 12px;
-    border: 1px solid rgba(79, 179, 217, 0.2);
+    border: 1px solid rgba(67, 160, 71, 0.2);
     margin-top: 15px;
 }
 
 .project-card h4 {
-    color: var(--ocean-blue);
+    color: var(--sage-green);
     margin-bottom: 10px;
     font-size: 1.2rem;
 }
