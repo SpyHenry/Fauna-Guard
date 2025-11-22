@@ -58,7 +58,10 @@ body {
     gap: 10px;
     font-size: 1.4rem;
     font-weight: 600;
-    color: #ffffff;
+    background: linear-gradient(135deg, var(--golden) 0%, var(--sage-green) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     letter-spacing: 0.5px;
 }
 
