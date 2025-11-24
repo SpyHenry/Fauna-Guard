@@ -59,6 +59,99 @@ function initGallery() {
     });
 }
 
+// Modal simples para ampliar imagens
+
+function initImageModal() {
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('image-modal-img');
+    const closeBtn = modal ? modal.querySelector('.image-modal-close') : null;
+    const prevBtn = modal ? modal.querySelector('.image-modal-nav.prev') : null;
+    const nextBtn = modal ? modal.querySelector('.image-modal-nav.next') : null;
+    let lastFocused = null;
+    let currentIndex = 0;
+    let currentList = [];
+
+    const updateButtons = () => {
+        if (!prevBtn || !nextBtn) return;
+        prevBtn.disabled = currentIndex <= 0;
+        nextBtn.disabled = currentIndex >= currentList.length - 1;
+    };
+
+    const render = () => {
+        const img = currentList[currentIndex];
+        if (!img) return;
+        modalImg.src = img.src;
+        modalImg.alt = img.alt || 'Imagem ampliada';
+        updateButtons();
+    };
+
+    const open = (images, startIndex = 0) => {
+        if (!modal || !modalImg) return;
+        currentList = images.filter(Boolean);
+        currentIndex = startIndex;
+        lastFocused = document.activeElement;
+        render();
+        modal.classList.add('active');
+        modal.setAttribute('aria-hidden','false');
+        (nextBtn && !nextBtn.disabled ? nextBtn : closeBtn)?.focus();
+        document.body.style.overflow = 'hidden';
+    };
+
+    const close = () => {
+        if (!modal) return;
+        modal.classList.remove('active');
+        modal.setAttribute('aria-hidden','true');
+        document.body.style.overflow = '';
+        if (lastFocused) lastFocused.focus();
+        currentList = [];
+        currentIndex = 0;
+    };
+
+    const go = (delta) => {
+        const newIndex = currentIndex + delta;
+        if (newIndex < 0 || newIndex >= currentList.length) return;
+        currentIndex = newIndex;
+        render();
+    };
+
+    prevBtn && prevBtn.addEventListener('click', () => go(-1));
+    nextBtn && nextBtn.addEventListener('click', () => go(1));
+    closeBtn && closeBtn.addEventListener('click', close);
+    modal && modal.addEventListener('click', (e)=>{ if(e.target===modal) close(); });
+    document.addEventListener('keydown', (e)=>{
+        if (!modal.classList.contains('active')) return;
+        if (e.key === 'Escape') return close();
+        if (e.key === 'ArrowRight') go(1);
+        if (e.key === 'ArrowLeft') go(-1);
+    });
+    return { open };
+}
+
+// Botão de lupa em cada imagem principal
+function injectZoomButtons(modalApi) {
+    document.querySelectorAll('.ong-card').forEach(card => {
+        const mainContainer = card.querySelector('.gallery-main');
+        if (!mainContainer) return;
+        if (mainContainer.querySelector('.img-zoom-btn')) return; // já existe
+        const mainImg = mainContainer.querySelector('img');
+        if (!mainImg) return;
+
+        // Coleta lista: primeiro a imagem principal + thumbs
+        const images = Array.from(card.querySelectorAll('.gallery-main img, .gallery-thumbs img'));
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'img-zoom-btn';
+        btn.setAttribute('aria-label','Ampliar e navegar imagens');
+        btn.innerHTML = '<i class="fas fa-search-plus"></i>';
+        btn.addEventListener('click', () => {
+            modalApi.open(images, 0); // abre começando na principal
+        });
+        mainContainer.appendChild(btn);
+        // Também permitir clique direto na imagem abrir a sequência
+        mainImg.addEventListener('click', () => modalApi.open(images, 0));
+    });
+}
+
 // Education Tabs
 function initEducationTabs() {
     const eduTabs = document.querySelectorAll('.edu-tab');
@@ -182,4 +275,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initEducationTabs();
     initONGLinks();
     initOceanSounds();
+    const modalApi = initImageModal();
+    injectZoomButtons(modalApi);
 });
